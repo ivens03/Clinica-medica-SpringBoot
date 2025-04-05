@@ -1,0 +1,39 @@
+package clinica.medica.models;
+
+
+import jakarta.persistence.Column;
+
+import java.io.Serializable;
+
+public abstract class pessoas implements Serializable {
+
+        private static final long serialVersionUID = 1L;
+
+        @Column(name = "nome", unique = true, nullable = false)
+        public String name;
+
+        @Column(name = "email", unique = true, nullable = false)
+        public String email;
+
+        @Column(name = "telefone", unique = true, nullable = false, length = 11)
+        public String telefone;
+
+        @Column(name = "cpf", unique = true, nullable = false, length = 11)
+        public String cpf;
+
+        @Column(name = "endereco", unique = true, nullable = false, length = 50)
+        public String endereco;
+
+        @Column(name = "numero", unique = true, nullable = false)
+        public String numero;
+        /*
+        * Endereço completo --
+        * (logradouro,
+        * número --
+        * complemento,
+        * bairro,
+        * cidade,
+        * UF
+        * CEP)
+        * */
+}
