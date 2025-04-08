@@ -55,6 +55,8 @@ public class MedicosController {
     }
 
     // ESPAÇO PARA FAZER ATUALIZAÇÃO
+    @PutMapping("medicosAtualizarcao/{id}")
+    public ResponseEntity<Object>
 
     @DeleteMapping("medicos/{id}")
     public ResponseEntity<Object>deleteMedico(@PathVariable(value = "id") Integer id) {
