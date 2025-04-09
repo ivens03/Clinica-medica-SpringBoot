@@ -58,11 +58,11 @@ public class MedicosController {
     }
 
     @Operation(summary = "Pega uma entidade dos banco de dados dos medicos.", method = "GET")
-    @GetMapping("/medicos/{id}")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Retorno feito com sucesso"),
             @ApiResponse(responseCode = "500", description = "Erro ao encontrar o medico")
     })
+    @GetMapping("/medicos/{id}")
     public ResponseEntity<Object>getOneMedico(@PathVariable(value = "id") Integer id) {
         Optional<MedicosModel> medicoID = medicosRepository.findById(id);
         if (medicoID.isEmpty()) {
